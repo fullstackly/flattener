@@ -1,3 +1,5 @@
+// Package flattener converts a 2Dimensional slice into 1Dimensinal
+// traversing 2D-slice values in spiral
 package flattener
 
 func Flatten(twoD [][]int) []int {

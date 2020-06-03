@@ -1,6 +1,7 @@
-package flattener
+package flatten
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 )
@@ -42,4 +43,10 @@ func TestFlatten(t *testing.T) {
 			t.Errorf("expected %v to be converted to %v, instead got %v", init, want, got)
 		}
 	}
+}
+
+func ExampleFlatten() {
+	flattened := Flatten([][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}})
+	fmt.Println(flattened)
+	// Output: [1 2 3 6 9 8 7 4 5]
 }
