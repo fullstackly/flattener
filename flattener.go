@@ -3,7 +3,7 @@
 package flattener
 
 func Flatten(twoD [][]int) []int {
-	oneD := make([]int, 0, len(twoD)*2)
+	oneD := make([]int, 0, len(twoD)*len(twoD))
 
 	var top, left int
 	bottom, right := len(twoD)-1, len(twoD)-1
